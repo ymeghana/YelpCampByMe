@@ -27,7 +27,7 @@ router.post("/register",(req,res)=>{
         email:req.body.email,
         avatar:req.body.avatar
     })
-    if(req.body.adminCode === 'secretcode123'){ //give your own user code
+    if(req.body.adminCode === process.env.SECRET){ //give your own user code
         newUser.isAdmin = true;
     }
     User.register(newUser,req.body.password,(err,user)=>{
