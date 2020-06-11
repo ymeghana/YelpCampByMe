@@ -23,7 +23,8 @@
                         <li class="nav-item" class="<%= typeof page !== 'undefined' && page === 'login' ? 'active' : '' %>"><a href="/login" class="nav-link">Login</a></li>
                         <li class="nav-item" class="<%= typeof page !== 'undefined' && page === 'register' ? 'active' : '' %>"><a href="/register" class="nav-link">Sign Up</a></li>
                     <%} else {%>                        
-                        <li class="nav-item"><a class="nav-link">Signed In as <%= currentUser.username%></a></li>
+                        <li class="nav-item"><a class="nav-link" href="/users/<%= currentUser._id%>">Signed In as <%= currentUser.username%></a></li>
+                        <li class="nav-item"><a href="/forgot" class="nav-link">Forgot Password</a></li>
                         <li class="nav-item"><a href="/logout" class="nav-link">Logout</a></li>
                     <%}%>
                 </ul>
