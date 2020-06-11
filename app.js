@@ -19,7 +19,7 @@ var commentRoutes = require('./routes/comments'),
 require('dotenv').config()
 
 //var mc = require("mongodb").MongoClient
-mongoose.connect("mongodb+srv://vnr_user:vnr@cluster0-qakyc.mongodb.net/test?retryWrites=true&w=majority",{ useNewUrlParser: true,useUnifiedTopology: true })
+mongoose.connect("mongodb+srv://vnr_user:vnr@cluster0-qakyc.mongodb.net/yelpcamp?retryWrites=true&w=majority",{ useNewUrlParser: true,useUnifiedTopology: true })
 app.use(bodyParser.urlencoded({extended:true}))
 app.set("view engine","ejs")
 app.use(express.static(__dirname+"/public"))
