@@ -19,7 +19,7 @@ var commentRoutes = require('./routes/comments'),
 require('dotenv').config()
 
 //var mc = require("mongodb").MongoClient
-mongoose.connect("mongodb://localhost/yelp_camp",{ useNewUrlParser: true,useUnifiedTopology: true })
+mongoose.connect("mongodb+srv://vnr_user:vnr@cluster0-qakyc.mongodb.net/test?retryWrites=true&w=majority",{ useNewUrlParser: true,useUnifiedTopology: true })
 app.use(bodyParser.urlencoded({extended:true}))
 app.set("view engine","ejs")
 app.use(express.static(__dirname+"/public"))
@@ -53,7 +53,7 @@ app.use("/campgrounds",campgroundRoutes) //adds that prefix string to the route
 app.use("/campgrounds/:id/comments",commentRoutes)
 app.use("/campgrounds/:id/reviews", reviewRoutes);
 
-app.listen(4001 ||process.env.PORT ,process.env.IP,()=>{
+app.listen(process.env.PORT || 4001 ,()=>{
     console.log("Yelp Camp Started")
 })
 
