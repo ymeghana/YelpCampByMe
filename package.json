@@ -29,6 +29,7 @@
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^6.0.1",
     "request": "^2.88.2",
-    "request-promise": "^4.2.5"
+    "request-promise": "^4.2.5",
+    "bl": ">=2.2.1"
   }
 }
